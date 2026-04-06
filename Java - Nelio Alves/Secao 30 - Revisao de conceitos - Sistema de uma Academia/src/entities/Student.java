@@ -35,10 +35,13 @@ public class Student {
     }
 
     // Methods
+    
+    // Calcula a idade com base na data de nascimento atual
     public Integer calculateAge() {
         return Period.between(dateOfBirth, LocalDate.now()).getYears();
     }
 
+    // Concede desconto de 10% para matrículas com duração superior a 12 meses
     public Double finalMonthlyPayment() {
         if (months > 12) {
             double discount = baseMonthlyFee - baseMonthlyFee * 0.1;
@@ -47,7 +50,6 @@ public class Student {
             return baseMonthlyFee;
         }
     }
-
 
     @Override
     public String toString() {

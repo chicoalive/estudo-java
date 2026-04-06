@@ -9,6 +9,7 @@ public class VipStudent extends Student {
 
     // Overriding methods
 
+    // Acréscimo de 30% na mensalidade base do VIP, mantendo a regra de desconto de 10% para mais de 12 meses
     @Override
     public Double finalMonthlyPayment() {
         double MonthlyVip = (getBaseMonthlyFee() + getBaseMonthlyFee() * 0.3);
